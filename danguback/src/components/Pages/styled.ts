@@ -7,20 +7,8 @@ export const BodyCotainer = styled.div`
   background-color: #242424;
 `;
 
-export const TemplateContainer = styled.div`
-  position: fixed;
-  pointer-events: none;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: 100%;
-  height: 100vh;
-`;
-
 export const Light = styled.div`
-  position: absolute;
+  position: fixed;
 
   width: 1444px;
   height: 847px;
@@ -32,25 +20,22 @@ export const Light = styled.div`
     rgba(255, 255, 255, 0) 100%
   );
 
-`;
-
-export const HeaderLayout = styled.div`
-  pointer-events: all;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
-  gap: 50vw;
-  width: 100%;
-  margin-top: 40px;
+  pointer-events: none;
 `;
 
 export const HeaderLogo = styled.img`
+  position: fixed;
+  left: 100px;
+  top: 60px;
+
   width: 4rem;
 `;
 
 export const HeaderTextLayout = styled.div`
+  position: fixed;
+  right: 100px;
+  top: 60px;
+
   display: flex;
   align-items: center;
   gap: 50px;
@@ -74,17 +59,11 @@ export const HeaderMenuText = styled.p`
   }
 `;
 
-export const FootterLayout = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  gap: 58vw;
-
-  width: 100%;
-  margin-bottom: 70px;
-`;
-
 export const LinkLayout = styled.div`
+  position: fixed;
+  left: 100px;
+  bottom: 100px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,6 +91,10 @@ export const LinkButton = styled.a`
 `;
 
 export const ScrollLayout = styled.div`
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+
   display: flex;
   flex-direction: column;
   align-items: center;

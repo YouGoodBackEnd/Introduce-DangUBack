@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as S from "./styled";
 
 const SessionOne = () => {
+  const TitleAnimation = useRef<any>();
+  const TextAnimation1 = useRef<any>();
+  const TextAnimation2 = useRef<any>();
+
+  useEffect(() => {
+    TitleAnimation.current.style.left = "0px";
+    TextAnimation1.current.style.opacity = 1;
+    TextAnimation2.current.style.opacity = 1;
+    TextAnimation1.current.style.bottom = "0px";
+    TextAnimation2.current.style.top = "0px";
+  }, []);
+
   return (
     <S.SessionContainer>
       <S.SeOneTextLayout>
-        <S.SeOneText marginR="240px" marginL="0px">
+        <S.SeOneTextOne ref={TextAnimation1}>
           우리가 추구하는 것은
-        </S.SeOneText>
+        </S.SeOneTextOne>
         <S.SeOneTitleLayout>
           <S.SeOneTitleLine />
-          <S.SeOneTitle>당신도 유능한 백엔드</S.SeOneTitle>
+          <S.SeOneTitle ref={TitleAnimation}>당신도 유능한 백엔드</S.SeOneTitle>
         </S.SeOneTitleLayout>
-        <S.SeOneText marginR="0px" marginL="300px">
+        <S.SeOneTextTwo ref={TextAnimation2}>
           <S.SeOneTextPoint>"유능"</S.SeOneTextPoint> 이다
-        </S.SeOneText>
+        </S.SeOneTextTwo>
       </S.SeOneTextLayout>
     </S.SessionContainer>
   );

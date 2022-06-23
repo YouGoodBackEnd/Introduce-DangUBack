@@ -10,11 +10,21 @@ const SessionFour = () => {
     { Field: "Designer", Name: ["손지원"], active: false, part: "백" },
   ]);
 
+  const ChangeActive = (e: any) => {
+    const { className } = e.target;
+    console.log(e)
+    setMembers(
+      members.map((x: any) =>
+        x.active === className ? { ...x, active: !x.active } : x
+      )
+    );
+  };
+
   const membersMap = members.map((x: any, index: number) => {
     return (
       <S.FieldBox key={index}>
         <S.FieldName>{x.Field}</S.FieldName>
-        <S.FieldImg src={x.active ? ArrowHigh : ArrowLow} className={x.Field} />
+        <S.FieldImg onClick={ChangeActive} src={x.active ? ArrowHigh : ArrowLow} className={x.Field} />
         {x.active ? (
           <S.MembersBoxOn>
             {x.Name.map((x: string) => {

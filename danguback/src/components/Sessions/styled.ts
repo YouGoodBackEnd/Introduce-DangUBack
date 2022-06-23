@@ -1,3 +1,4 @@
+import exp from "constants";
 import styled from "styled-components";
 
 export const SessionContainer = styled.div`
@@ -19,12 +20,12 @@ export const SeOneTextLayout = styled.div`
   align-items: center;
 `;
 
-type SeOneTextType = {
-  marginR: string;
-  marginL: string;
-};
+export const SeOneTextOne = styled.p`
+  position: relative;
+  bottom: -60px;
+  opacity: 0;
+  transition: all 1.5s;
 
-export const SeOneText = styled.p<SeOneTextType>`
   display: flex;
   align-items: center;
 
@@ -36,8 +37,29 @@ export const SeOneText = styled.p<SeOneTextType>`
   color: #afafaf;
 
   margin: 0px;
-  margin-right: ${(props) => props.marginR};
-  margin-left: ${(props) => props.marginL};
+  margin-right: 240px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+`;
+
+export const SeOneTextTwo = styled.p`
+  position: relative;
+  top: -60px;
+  opacity: 0;
+  transition: all 1.5s;
+  
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 25px;
+  color: #afafaf;
+
+  margin: 0px;
+  margin-left: 300px;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 `;
 
@@ -47,6 +69,8 @@ export const SeOneTextPoint = styled.p`
 `;
 
 export const SeOneTitleLayout = styled.div`
+  overflow: hidden;
+
   display: flex;
   align-items: center;
 
@@ -63,6 +87,10 @@ export const SeOneTitleLine = styled.div`
 `;
 
 export const SeOneTitle = styled.p`
+  transition: all 1s;
+  position: relative;
+  left: -800px;
+
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 700;
@@ -71,7 +99,6 @@ export const SeOneTitle = styled.p`
   color: #ffffff;
 
   margin: 0px;
-
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 `;
 
