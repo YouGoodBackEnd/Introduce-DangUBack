@@ -15,7 +15,7 @@ const SessionOne = () => {
   }, []);
 
   return (
-    <S.SessionContainer>
+    <S.SessionContainer id="home">
       <S.SeOneTextLayout>
         <S.SeOneTextOne ref={TextAnimation1}>
           우리가 추구하는 것은

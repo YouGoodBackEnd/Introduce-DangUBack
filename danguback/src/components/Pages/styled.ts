@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const BodyCotainer = styled.div`
-  overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   position: relative;
   background-color: #242424;
 `;
@@ -41,7 +41,7 @@ export const HeaderTextLayout = styled.div`
   gap: 50px;
 `;
 
-export const HeaderMenuText = styled.p`
+export const HeaderMenuText = styled.a`
   cursor: pointer;
   transition: all 0.2s;
 
@@ -53,6 +53,7 @@ export const HeaderMenuText = styled.p`
   color: #d7d7d7;
 
   margin: 0px;
+  text-decoration: none;
 
   :hover {
     color: #ffffff;
@@ -88,6 +89,10 @@ export const LinkButton = styled.a`
   height: 38px;
   border: none;
   background-color: #242424;
+
+  :hover {
+    background: rgba(36, 36, 36, 0.3);
+  }
 `;
 
 export const ScrollLayout = styled.div`

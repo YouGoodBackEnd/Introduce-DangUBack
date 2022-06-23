@@ -10,10 +10,10 @@ const Fixed = () => {
       <S.Light />
       <S.HeaderLogo src={Logo} />
       <S.HeaderTextLayout>
-        <S.HeaderMenuText>Home</S.HeaderMenuText>
-        <S.HeaderMenuText>Introduce</S.HeaderMenuText>
-        <S.HeaderMenuText>Project</S.HeaderMenuText>
-        <S.HeaderMenuText>Member</S.HeaderMenuText>
+        <S.HeaderMenuText href="#home">Home</S.HeaderMenuText>
+        <S.HeaderMenuText href="#introduce">Introduce</S.HeaderMenuText>
+        <S.HeaderMenuText href="#project">Project</S.HeaderMenuText>
+        <S.HeaderMenuText href="#member">Member</S.HeaderMenuText>
       </S.HeaderTextLayout>
       <S.LinkLayout>
         <S.LinkButton href="https://github.com/YouGoodBackEnd" target="_blank">
@@ -23,11 +23,11 @@ const Fixed = () => {
           <img src={FaceBook} />
         </S.LinkButton>
       </S.LinkLayout>
-      <S.ScrollLayout>
+      {/* <S.ScrollLayout>
         <S.ScrollLine h="160px" />
         <S.ScrollText>Scroll</S.ScrollText>
         <S.ScrollLine h="105px" />
-      </S.ScrollLayout>
+      </S.ScrollLayout> */}
     </>
   );
 };

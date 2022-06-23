@@ -34,7 +34,7 @@ export const SeOneTextOne = styled.p`
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 25px;
-  color: #afafaf;
+  color: #d2d2d2;
 
   margin: 0px;
   margin-right: 240px;
@@ -46,7 +46,6 @@ export const SeOneTextTwo = styled.p`
   top: -60px;
   opacity: 0;
   transition: all 1.5s;
-  
 
   display: flex;
   align-items: center;
@@ -135,13 +134,32 @@ export const SeTwoSubLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 45px;
 
   margin-top: 70px;
   margin-left: 65px;
 `;
 
-export const SeTwoTextLayout = styled.div`
+export const SeTwoTextLayout1 = styled.div`
+  transition: all 0.5s;
+
+  position: relative;
+  right: -100px;
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const SeTwoTextLayout2 = styled.div`
+  transition: all 0.5s;
+
+  position: relative;
+  left: -100px;
+  opacity: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +167,12 @@ export const SeTwoTextLayout = styled.div`
 `;
 
 export const SeTwoLine = styled.div`
+  transition: all 0.5s;
+
+  position: relative;
+  top: -150px;
+  opacity: 0;
+
   width: 3px;
   height: 50px;
   background: #d7d7d7;
@@ -211,7 +235,7 @@ export const SeFourLine = styled.div`
 
 export const FieldLayout = styled.div`
   display: flex;
-  gap: 5vw;
+  gap: 1vw;
 `;
 
 export const FieldBox = styled.div`
@@ -219,6 +243,10 @@ export const FieldBox = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  .MembersBoxOnClick {
+    height: 347px;
+  }
 `;
 
 export const FieldName = styled.p`
@@ -234,8 +262,17 @@ export const FieldName = styled.p`
   margin: 0px;
 `;
 
+export const FieldButton = styled.button`
+  cursor: pointer;
+
+  background-color: #242424;
+  border: none;
+  outline: none;
+`;
+
 export const FieldImg = styled.img`
   cursor: pointer;
+  pointer-events: none;
 `;
 
 export const MembersBoxOff = styled.div`
@@ -258,13 +295,16 @@ export const MembersBoxOff = styled.div`
 `;
 
 export const MembersBoxOn = styled.div`
+  transition: all 0.5s;
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 
   width: 200px;
-  height: 347px;
+  height: 1px;
   background: #303030;
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;

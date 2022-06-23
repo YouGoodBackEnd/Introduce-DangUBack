@@ -6,29 +6,33 @@ import ArrowHigh from "../../assets/svg/ArrowHigh.svg";
 const SessionFour = () => {
   const [members, setMembers] = useState<any>([
     { Field: "FrontEnd", Name: ["손지원"], active: false, part: "당" },
-    { Field: "Android", Name: ["이용진"], active: false, part: "유" },
-    { Field: "Designer", Name: ["손지원"], active: false, part: "백" },
+    { Field: "BackEnd", Name: ["아직 NULL입니다"], active: false, part: "유" },
+    { Field: "Android", Name: ["이용진"], active: false, part: "백" },
+    { Field: "ios", Name: ["아직 NULL입니다"], active: false, part: "멤" },
+    { Field: "Designer", Name: ["손지원"], active: false, part: "버" },
   ]);
 
   const ChangeActive = (e: any) => {
-    const { className } = e.target;
-    console.log(e)
+    const { name } = e.target;
     setMembers(
       members.map((x: any) =>
-        x.active === className ? { ...x, active: !x.active } : x
+        x.Field === name ? { ...x, active: !x.active } : x
       )
     );
+    console.log(members);
   };
 
   const membersMap = members.map((x: any, index: number) => {
     return (
-      <S.FieldBox key={index}>
+      <S.FieldBox key={index} >
         <S.FieldName>{x.Field}</S.FieldName>
-        <S.FieldImg onClick={ChangeActive} src={x.active ? ArrowHigh : ArrowLow} className={x.Field} />
+        <S.FieldButton onClick={ChangeActive} name={x.Field}>
+          <S.FieldImg src={x.active ? ArrowHigh : ArrowLow} />
+        </S.FieldButton>
         {x.active ? (
-          <S.MembersBoxOn>
+          <S.MembersBoxOn className={x.active ? "MembersBoxOnClick" : ""}>
             {x.Name.map((x: string) => {
-              return <S.MembersName>{x}</S.MembersName>;
+              return <S.MembersName key={index}>{x}</S.MembersName>;
             })}
           </S.MembersBoxOn>
         ) : (
@@ -39,7 +43,7 @@ const SessionFour = () => {
   });
 
   return (
-    <S.SessionContainer>
+    <S.SessionContainer id="member">
       <S.SeTwoTitle>Members</S.SeTwoTitle>
       <S.SeFourLine />
       <S.FieldLayout>{membersMap}</S.FieldLayout>
