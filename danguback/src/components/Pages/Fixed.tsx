@@ -8,7 +8,9 @@ const Fixed = () => {
   return (
     <>
       <S.Light />
-      <S.HeaderLogo src={Logo} />
+      <S.HeaderMenuText href="#home">
+        <S.HeaderLogo src={Logo} />
+      </S.HeaderMenuText>
       <S.HeaderTextLayout>
         <S.HeaderMenuText href="#home">Home</S.HeaderMenuText>
         <S.HeaderMenuText href="#introduce">Introduce</S.HeaderMenuText>
@@ -19,7 +21,7 @@ const Fixed = () => {
         <S.LinkButton href="https://github.com/YouGoodBackEnd" target="_blank">
           <img src={GitHub} />
         </S.LinkButton>
-        <S.LinkButton>
+        <S.LinkButton href="https://www.facebook.com/DangUBack" target="_blank">
           <img src={FaceBook} />
         </S.LinkButton>
       </S.LinkLayout>

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const BodyCotainer = styled.div`
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
   position: relative;
   background-color: #242424;
 `;

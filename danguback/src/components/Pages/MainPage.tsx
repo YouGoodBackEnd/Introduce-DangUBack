@@ -12,10 +12,10 @@ const MainPage = () => {
   let scroll = true;
 
   window.addEventListener("wheel", (e) => {
-    if (e.deltaY > 60 && page < array.length - 1 && scroll) {
+    if (e.deltaY > 90 && page < array.length - 1 && scroll) {
       movePage(1);
     }
-    if (e.deltaY < -60 && page > 0 && scroll) {
+    if (e.deltaY < -90 && page > 0 && scroll) {
       movePage(-1);
     }
   });
@@ -26,7 +26,7 @@ const MainPage = () => {
     window.location.href = array[page];
     setTimeout(() => {
       scroll = true;
-    }, 500);
+    }, 300);
   };
 
   return (
